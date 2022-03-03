@@ -19,6 +19,7 @@ class HomePage extends StatelessWidget {
               child: ListView(
                 children: const [
                   StoriesList(),
+                  PostWidget(),
                 ],
               )),
         ));
