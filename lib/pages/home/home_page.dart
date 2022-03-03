@@ -15,13 +15,22 @@ class HomePage extends StatelessWidget {
         body: Align(
           alignment: Alignment.topCenter,
           child: ConstrainedBox(
-              constraints: const BoxConstraints(maxWidth: 1000),
-              child: ListView(
-                children: const [
-                  StoriesList(),
-                  PostWidget(),
-                ],
-              )),
+            constraints: const BoxConstraints(maxWidth: 1000),
+            child: Row(
+              children: [
+                Expanded(
+                  child: ListView(
+                    children: const [
+                      StoriesList(),
+                      PostWidget(),
+                      PostWidget(),
+                    ],
+                  ),
+                ),
+                const RightPanel(),
+              ],
+            ),
+          ),
         ));
   }
 }
