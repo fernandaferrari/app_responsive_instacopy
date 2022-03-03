@@ -11,24 +11,19 @@ class ResponsiveMenuAction extends StatelessWidget {
       children: [
         ResponsiveVisibility(
             visible: false,
-            visibleWhen: [Condition.smallerThan(name: TABLET)],
-            child: IconButton(onPressed: () {}, icon: Icon(Icons.search))),
-        SizedBox(
-          width: 4,
-        ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.home)),
-        SizedBox(
-          width: 4,
-        ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.send)),
-        SizedBox(
-          width: 4,
-        ),
-        IconButton(onPressed: () {}, icon: Icon(Icons.favorite_border)),
-        SizedBox(
-          width: 16,
-        ),
-        CircleAvatar(
+            visibleWhen: const [
+              Condition.smallerThan(name: TABLET),
+            ],
+            child:
+                IconButton(onPressed: () {}, icon: const Icon(Icons.search))),
+        const SizedBox(width: 4),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.home)),
+        const SizedBox(width: 4),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.send)),
+        const SizedBox(width: 4),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.favorite_border)),
+        const SizedBox(width: 16),
+        const CircleAvatar(
           radius: 16,
           backgroundImage: NetworkImage(
               'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRrae6KNxlVhxDOo_mZEUx7aN1LVBGyBszAA&usqp=CAU'),

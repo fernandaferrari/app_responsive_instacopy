@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
           ResponsiveBreakpoint.resize(800, name: DESKTOP),
         ],
       ),
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }

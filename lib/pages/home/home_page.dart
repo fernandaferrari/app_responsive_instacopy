@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'widgets/responsive_app_bar.dart';
+import 'widgets/widgets.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -8,16 +7,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: PreferredSize(
-        child: ResponsiveAppBar(),
-        preferredSize: Size(double.infinity, 52),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 15),
-        child: Container(
-          color: Colors.red,
+        backgroundColor: Colors.black87,
+        appBar: const PreferredSize(
+          child: ResponsiveAppBar(),
+          preferredSize: Size(double.infinity, 52),
         ),
-      ),
-    );
+        body: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: 1000),
+              child: ListView(
+                children: const [
+                  StoriesList(),
+                ],
+              )),
+        ));
   }
 }
