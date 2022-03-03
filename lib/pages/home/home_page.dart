@@ -12,6 +12,12 @@ class HomePage extends StatelessWidget {
         child: ResponsiveAppBar(),
         preferredSize: Size(double.infinity, 52),
       ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: Container(
+          color: Colors.red,
+        ),
+      ),
     );
   }
 }
